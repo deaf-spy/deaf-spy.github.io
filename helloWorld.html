@@ -5,9 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+          background-color: #191919;
+    }
+      canvas {
+        object-fit: contain;
+        height: 99vh;
+        width: auto;
+      }
+
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)"
+      }
+    </style>
   </head>
   <body>
-    <div id="canvas-container"></div>
+    <div id="canvas-container" class="center"></div>
     <script>
         (function dartProgram(){function copyProperties(a,b){var s=Object.keys(a)
         for(var r=0;r<s.length;r++){var q=s[r]
