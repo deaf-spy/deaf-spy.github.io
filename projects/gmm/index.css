@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 :root {
-    --font_family: "Hack Nerd Font";
-    /* --color1: */
+    --font_family: Merriweather, "Hack Nerd Font";
+        --color1:
 }
+
 body {
     margin: 0;
     padding: 0;
     border: 0;
     background-color: black;
-        color: white;
+    color: white;
     
         /* font-family: "Latin Modern Math"; */
         font-family: var(--font_family);
@@ -17,7 +19,7 @@ body {
 
 canvas {
     width: max(99vw, 99vh);
-        height: auto;
+    height: auto;
 }
 
 #canvas-container {
@@ -33,12 +35,13 @@ canvas {
     transform: translate(-50%, -50%)"
 
 }
+
 .uploadDisplayContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-    height: 50px;
+    height: fit-content;
 }
 
 input,
@@ -48,7 +51,7 @@ input[type=file],
     /* height: 50px; */
 }
 
-#showDataInput,
+.showDataInput,
 input[type=file]::file-selector-button {
     margin-right: 10px;
     margin-top: 10px;
@@ -61,7 +64,7 @@ input[type=file]::file-selector-button {
     transition: background .2s ease-in-out;
 }
 
-#showDataInput {
+.showDataInput {
     cursor: pointer;
     pointer-events: auto;
     /* position: absolute; */
@@ -72,7 +75,8 @@ input[type=file]::file-selector-button {
     z-index: 100;
 }
 
-#showDataInput:hover {
+.showDataInput:hover,
+#submit:hover {
     cursor: pointer;
 
 }
@@ -100,6 +104,7 @@ input[type=text] {
 
 #giveData {
     height: fit-content;
+    min-height: 160px;
     width: 500px;
     opacity: 98%;
 
@@ -130,12 +135,19 @@ input[type=text] {
     align-items: center;
     flex-direction: row;
 
+    height: fit-content;
+        width: fit-content;
     /* padding: 50px;
                                                                                                                                                     padding-bottom: 0px; */
 }
 
-#uploadFile {
-    /* margin-left: 50px; */
+#uploadFile {}
+
+/* margin-left: 50px; */
+#fileInput {
+    /* height: 40px;
+    width: 80px;
+    font-family: Merriweather; */
 }
 
 #dataDisplay {
@@ -144,6 +156,11 @@ input[type=text] {
     width: fit-content;
 }
 
+#uploadedContent {
+    overflow-y: scroll;
+    max-height: 200px;
+    max-width: 90px;
+}
 #fileUpload {
     height: 50px;
     width: 100px;
@@ -191,7 +208,7 @@ input[type="email"] {
     font-size: 16px;
     cursor: text;
     top: 25px;
-    left: 30px;
+    left: 15px;
 }
 
 label,
@@ -233,7 +250,7 @@ label,
 
     position: absolute;
     margin-top: -53px;
-    margin-left: 190px;
+    margin-left: 180px;
 
     height: 20px;
     width: 20px;
@@ -241,6 +258,24 @@ label,
     color: #9b9b9b;
 }
 
+#submit {
+    border: 1px solid #084cdf;
+    border-radius: 50%;
+    background-color: #084cdf;
+    color: white;
+
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 250px;
+    height: 20px;
+    width: 20px;
+
+    color: #9b9b9b;
+}
+
+.fa-arrow-right {
+    color: white;
+}
 /* .fa-question {
                                                                                                                                                                                                                                                                                                                 } */
 
@@ -253,7 +288,7 @@ label,
     padding: 5px 0;
     border-radius: 6px;
 
-    margin-bottom: 120px;
+    margin-top: 120px;
 
     position: absolute;
     z-index: 1;
@@ -267,10 +302,11 @@ label,
     padding-left: 10px;
 }
 
-.fa-x {
+.closeButton {
     position: absolute;
-    margin-top: -125px;
-    margin-left: 200px;
+    margin-top: 10px;
+        margin-left: 447px;
+        color: white;
 }
 
 #title {
@@ -280,5 +316,61 @@ label,
     left: 50%;
     transform: translateX(-50%);
     top: 20px;
-    /* width: 100%; */
+}
+
+#fernGif {
+    position: absolute;
+    left: 43%;
+    top: min(25vh, 25vw);
+    z-index: 5;
+    height: auto;
+    width: 150px;
+}
+
+#fernGif.hidden {
+    z-index: -100;
+    opacity: 0%;
+}
+
+button {
+    font-family: Merriweather;
+}
+
+#dataOptions {
+    height: 45px;
+    width: 210px;
+    background-color: #eeeeee;
+    color: #9b9b9b;
+    border-radius: 10px;
+
+    padding: 7px 4px;
+    margin-left: 10px;
+
+    font-size: 16px;
+
+    font-family: Merriweather, sans-serif;
+}
+
+/* #dataOptions:placeholder-shown {
+    margin-left: 20px;
+} */
+
+/* #dataOptions:placeholder-shown {
+    left: 30px;
+} */
+
+#submitOption {
+    border: 1px solid #084cdf;
+    border-radius: 50%;
+    background-color: #084cdf;
+    color: white;
+
+    position: absolute;
+    margin-top: 85px;
+    margin-left: 250px;
+    height: 20px;
+    width: 20px;
+
+
+    color: #9b9b9b;
 }
