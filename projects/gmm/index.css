@@ -280,5 +280,5 @@ label,
     left: 50%;
     transform: translateX(-50%);
     top: 20px;
-    width: 100%;
+    /* width: 100%; */
 }
