@@ -12,37 +12,7 @@
 
 
   </head>
-  <script>
-    function showInput() {
-        const giveData = document.getElementById("giveData");
-        console.log(giveData);
-        if (giveData.classList.contains("hidden")) {
-            giveData.classList.remove("hidden");
-        } else {
-            giveData.classList.add("hidden");
-        }
-    }
-    
-    function closeInput() {
-        
-        const giveData = document.getElementById("giveData");
-        giveData.classList.add("hidden");
-    }
-
-    function removeFernImage() {
-        const fernImage = document.getElementById("fernGif");
-        fernImage.remove()
-    }
-
-    
-    window.onload = function() {
-        const fernImage = document.getElementById("fernGif");
-        fernImage.src = "./Fern-4.gif?=" + Math.random();
-        
-    }
-
-    window.setTimeout(removeFernImage, 6000);
-  </script>
+  <script src="input.js"></script>
   <body>
     <img id="fernGif">
     <div id="title">GMM Interactive Visualization of 2D Data</div>
@@ -51,7 +21,7 @@
         <button class="showDataInput closeButton flex" onclick=closeInput()>
             <i class="fa-solid fa-x"></i>
         </button>
-
+ 
         <h1>Data upload: </h1>
         <div id="uploadWrapper">
             <div class="uploadDisplayContainer">
